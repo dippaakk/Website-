@@ -1,11 +1,88 @@
+/* ---- GLOBAL STYLES ---- */
 body {
-    font-family: sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7f9; /* A light, clean background */
+    margin: 0;
+    padding: 2rem;
     color: #333;
-    margin: 2em; /* Adds some space around the content */
 }
 
-h1 {
-    color: #0366d6; /* A blue color */
+.portfolio-container {
+    max-width: 1200px;
+    margin: 0 auto; /* Center the main container */
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50; /* A deep blue-gray color */
+    margin-bottom: 3rem;
+}
+
+/* ---- TIMELINE / GRID CONTAINER ---- */
+.timeline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem; /* Space between cards */
+    justify-content: center;
+}
+
+/* ---- CARD STYLES ---- */
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem 2rem;
+    flex: 1 1 350px; /* Flex properties for responsive columns */
+    max-width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 5px solid #3498db; /* Accent color border */
+}
+
+.card:hover {
+    transform: translateY(-8px); /* Lifts the card on hover */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.card-subtitle {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #3498db; /* Matches the border accent */
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+}
+
+.card-date {
+    font-size: 0.85rem;
+    color: #7f8c8d; /* A muted gray for secondary details */
+    margin-bottom: 1rem;
+}
+
+.card-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* ---- RESPONSIVE DESIGN FOR MOBILE ---- */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+    .card {
+        flex-basis: 100%; /* Makes cards full-width on smaller screens */
+        max-width: 100%;
+    }
 }
